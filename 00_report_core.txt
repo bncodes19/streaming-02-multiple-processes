@@ -1,0 +1,25 @@
+
+======================================================================
+======================================================================
+ Welcome to NW Diagnostics!
+ At: 2024-05-07 at 09:25 PM
+ Operating System: posix Darwin 23.4.0
+ System Architecture: 64bit
+ Number of CPUs: 8
+ Machine Type: arm64
+ Python Version: 3.12.1
+ Python Build Date and Compiler: v3.12.1:2305ca5144 with Dec  7 2023 17:23:38
+ Python Implementation: CPython
+ Active pip environment: None
+ Path to Interpreter:         /Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+ Path to virtual environment: /Library/Frameworks/Python.framework/Versions/3.12
+ Current Working Directory:   /Users/brettneely/Documents/streaming-02-multiple-processes
+ Path to source directory:    /Users/brettneely/Documents/streaming-02-multiple-processes
+ Path to script file:         /Users/brettneely/Documents/streaming-02-multiple-processes/00_check_core.py
+ User's Home Directory:       /Users/brettneely
+ Terminal Environment:        VS Code
+ Terminal Type:               zsh
+ Git available in PATH:       True 
+======================================================================
+======================================================================
+

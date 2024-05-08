@@ -9,7 +9,7 @@ Run the app several times and notice the order of events.
 Is the order predictable?
 
 Modify the code to make each task take longer. 
-When the task duration is 3 seconds, we'll typically got concurrency errors 
+When the task duration is 3 seconds, we'll typically get concurrency errors 
 as multiple processes try to access the database at the same time.
 
 SQLite is designed for lightweight databases, and is not ideal for high concurrency applications. 
@@ -28,12 +28,11 @@ import sqlite3
 import sys
 import time
 
-# Set up basic configuration for logging
+# Set up basic configuration for logging and write to a file log.txt
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+logging.basicConfig(filename="log.txt",
+    level=logging.INFO, filemode="a", format="%(asctime)s - %(levelname)s - %(message)s"
 )
-
 
 # Declare program constants (typically constants are named with ALL_CAPS)
 
@@ -194,4 +193,3 @@ if __name__ == "__main__":
     # if the task duration is 0, then show the success message
     if TASK_DURATION_SECONDS == 0:
         logging.info(SUCCESS_MESSAGE)
-   
