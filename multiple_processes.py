@@ -36,7 +36,7 @@ logging.basicConfig(filename="log.txt",
 
 # Declare program constants (typically constants are named with ALL_CAPS)
 
-TASK_DURATION_SECONDS = 3 # TODO: increase this to 3 and see what happens
+TASK_DURATION_SECONDS = 1 # When the task duration is 1 second long, rows are able to insert concurrently
 DIVIDER = "=" * 70  # A string divider for cleaner output formatting
 DB_NAME = "shared.db"
 
@@ -129,7 +129,7 @@ def drop_table():
 
 def insert_pet(process, name, breed):
     """Insert a pet into pets table."""
-    logging.info(f"  Called insert_pet() with process={process}, name={name}, breed={breed}.")
+    logging.info(f"Called insert_pet() with process={process}, name={name}, breed={breed}.")
     
     try:
         conn = sqlite3.connect(DB_NAME)

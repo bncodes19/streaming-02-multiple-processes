@@ -1,4 +1,5 @@
-# streaming-02-multiple-processes
+# Neely 
+## Streaming Multiple Processses and Stream from CSV File
 
 > Multiple processes accessing a shared resource concurrently
 
@@ -8,6 +9,8 @@ This example starts a shared database and multiple processes.
 
 The processes represent multiple users, or locations, or programs 
 hitting a shared database at the same time. 
+
+A second process streams data from an input file and writes to an output file.
 
 ## Prerequisites
 
@@ -80,6 +83,22 @@ Use out0.txt to document the first run.
 
 Use out3.txt to document the second run.
 
+## Task 8. Stream from a custom file
+
+In this process, I utilized Tesla stock price information over the course of a year. The data can be found in:
+[bncodes19/streaming-02-multiple-processes/main/tsla.csv](https://github.com/bncodes19/streaming-02-multiple-processes/blob/main/tsla.csv)
+
+Here is an example output of this data:
+| Date       | Open       | High       | Low        | Close      | AdjClose   | Volume    |
+|------------|------------|------------|------------|------------|------------|-----------|
+| 2023-05-10 | 172.550003 | 174.429993 | 166.679993 | 168.539993 | 168.539993 | 119840700 |
+| 2023-05-11 | 168.699997 | 173.570007 | 166.789993 | 172.080002 | 172.080002 | 103889900 |
+| 2023-05-12 | 176.070007 | 177.380005 | 167.229996 | 167.979996 | 167.979996 | 157577100 |
+| 2023-05-15 | 167.660004 | 169.759995 | 164.550003 | 166.350006 | 166.350006 | 105592500 |
+| 2023-05-16 | 165.649994 | 169.520004 | 164.350006 | 166.520004 | 166.520004 | 98288800  |
+
+The process in [bncodes19/streaming-02-multiple-processes/main/process_streaming_neely.py](https://github.com/bncodes19/streaming-02-multiple-processes/blob/main/process_streaming_neely.py) will then write the stream process to an output file: 
+[bncodes19/streaming-02-multiple-processes/main/out9.txt](https://github.com/bncodes19/streaming-02-multiple-processes/blob/main/out9.txt)
 
 -----
 
